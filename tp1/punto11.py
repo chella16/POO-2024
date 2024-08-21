@@ -41,3 +41,4 @@ while rta == "si":
 
 print(f"la cantidad de partidas que ganaste es {ganadas} ")
 print(f"la cantidad de partidas que perdiste es {perdidas} ")
+#cacamate prueba para ver si se guarda o no XD
