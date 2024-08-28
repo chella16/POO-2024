@@ -38,4 +38,4 @@ class Persona:
             rta_trabaja= "si"
         if self.__persona_estudia:
             rta_estudia= "si"
-        return f"Género : {self.__persona_genero} Edad: {self.__persona_edad} Estudia: {rta_estudia} Trabaja: {rta_trabaja}"
+        return f"Género : {self.__persona_genero} Edad: {self.__persona_edad}"
