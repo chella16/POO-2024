@@ -32,7 +32,7 @@ class Plantilla ():
         quimica_plantilla = 0
         for i in self.__plantilla_jugadores:
             quimica_plantilla = quimica_plantilla + i.calcular_quimica(self.__pais_favorito_plantel, self.__equipo_favorito)
-        quimica_plantilla = quimica_plantilla / len(self.__plantilla_jugadores) +1 # porque devuelve el indice (10, pq el areglo va de 0 a 10), no devuelve la longitud total)
+        quimica_plantilla = quimica_plantilla / (len(self.__plantilla_jugadores) + 1) # porque devuelve el indice (10, pq el areglo va de 0 a 10), no devuelve la longitud total)
         return quimica_plantilla
     
     
