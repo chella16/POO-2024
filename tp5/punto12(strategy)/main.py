@@ -1,0 +1,61 @@
+from contexto_plataforma import Plataforma_streaming
+from pelicula import Pelicula
+from estrategias import Strat_Completo, Strat_Menores_13, Strat_Menores_18
+
+disney = Plataforma_streaming("Disney plus")
+hbo = Plataforma_streaming("HBO Max")
+
+pelicula1 = Pelicula("El Misterio del Lago", 13)
+pelicula2 = Pelicula("Aventura en la Selva", 18)
+pelicula3 = Pelicula("El Espía en la Sombra", 7)
+pelicula4 = Pelicula("Viaje a Marte", 10)
+pelicula5 = Pelicula("El Tesoro Perdido", 12)
+pelicula6 = Pelicula("La Ciudad Fantasma", 15)
+pelicula7 = Pelicula("Amor en París", 14)
+pelicula8 = Pelicula("El Último Guerrero", 18)
+pelicula9 = Pelicula("La Leyenda del Dragón", 13)
+pelicula10 = Pelicula("El Enigma de la Montaña", 12)
+pelicula11 = Pelicula("Secretos de la Galaxia", 10)
+pelicula12 = Pelicula("Rescate en el Ártico", 7)
+pelicula13 = Pelicula("El Robo del Siglo", 16)
+pelicula14 = Pelicula("La Maldición de la Bruja", 15)
+pelicula15 = Pelicula("Sueños de Libertad", 14)
+
+disney.agregar_pelicula(pelicula1)
+disney.agregar_pelicula(pelicula2)
+disney.agregar_pelicula(pelicula3)
+disney.agregar_pelicula(pelicula4)
+disney.agregar_pelicula(pelicula5)
+disney.agregar_pelicula(pelicula6)
+disney.agregar_pelicula(pelicula7)
+
+hbo.agregar_pelicula(pelicula8)
+hbo.agregar_pelicula(pelicula9)
+hbo.agregar_pelicula(pelicula10)
+hbo.agregar_pelicula(pelicula11)
+hbo.agregar_pelicula(pelicula12)
+hbo.agregar_pelicula(pelicula13)
+hbo.agregar_pelicula(pelicula14)
+hbo.agregar_pelicula(pelicula15)
+
+catalogo_completo = Strat_Completo()
+catalogo_13 = Strat_Menores_13()
+catalogo_18 = Strat_Menores_18()
+
+print("mostrar catalogo de todo en hbo y disney plus")
+disney.set_estrategia(catalogo_completo)
+disney.consultar_catalogo()
+hbo.set_estrategia(catalogo_completo)
+hbo.consultar_catalogo()
+
+print("mostrar catalogo MENORES DE 13 en hbo y disney plus")
+disney.set_estrategia(catalogo_13)
+disney.consultar_catalogo()
+hbo.set_estrategia(catalogo_13)
+hbo.consultar_catalogo()
+
+print("mostrar catalogo MENORES DE 18 en hbo y disney plus")
+disney.set_estrategia(catalogo_18)
+disney.consultar_catalogo()
+hbo.set_estrategia(catalogo_18)
+hbo.consultar_catalogo()
